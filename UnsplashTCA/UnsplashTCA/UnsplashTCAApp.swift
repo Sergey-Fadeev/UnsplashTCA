@@ -14,9 +14,9 @@ struct UnsplashTCAApp: App {
     WindowGroup {
       MainScreenView(
         store: Store(
-          initialState: CounterFeature.State()
+          initialState: MainScreenReducer.State()
         ) {
-          CounterFeature()
+          MainScreenReducer()
         }
       )
     }

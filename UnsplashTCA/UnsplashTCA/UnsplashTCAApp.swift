@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct UnsplashTCAApp: App {
-    var body: some Scene {
-        WindowGroup {
-            ContentView()
+  var body: some Scene {
+    WindowGroup {
+      MainScreenView(
+        store: Store(
+          initialState: CounterFeature.State()
+        ) {
+          CounterFeature()
         }
+      )
     }
+  }
 }
